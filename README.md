@@ -2,6 +2,8 @@
 
 Repositório destinado ao controle de versão do projeto `IDA Future Friday`.
 
+![localhost_8080_ (1)](https://github.com/Wev-at2/lp_ida_blackfriday-20231025/assets/82066256/14ced7b2-9070-400f-b3f0-6aee44981acf)
+
 ## Requirements
 
 Make sure [Node JS](https://nodejs.org), [NPM](https://www.npmjs.com) and [Gulp](http://gulpjs.com/) already installed on your computer.
