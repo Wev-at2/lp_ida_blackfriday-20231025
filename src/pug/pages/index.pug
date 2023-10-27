@@ -1,0 +1,113 @@
+extends ../layouts/default-layout.pug
+block content
+  section(class="wc-futurefriday")
+    div(class="wc-futurefriday__bg")
+      div(class="wc-futurefriday__left")
+        picture
+          source(media="(min-width: 769px", srcset="./assets/images/ida-mainbanner4x5.jpg")
+
+          source(media="(max-width: 768px", srcset="./assets/images/ida-mainbanner1x1.jpg")
+
+          img.ida-main__banner--img(src="/caminho-completo/para/imagem-default.jpg", alt="FUTURE FRIDAY", title="FUTURE FRIDAY", style="display: block; max-width: 100%; height: auto")
+          //- img(src="./assets/images/ida-mainbanner1x1.jpg", alt="FUTURE FRIDAY", title="FUTURE FRIDAY", srcset="")
+
+      div(class="wc-futurefriday__right")
+        div(class="wc-futurefriday__right--container")
+          div(class="wc-futurefriday__right--title")
+            h1
+              strong FUTURE 
+              | FRIDAY
+            h2 antecipada
+          p(class="wc-futurefriday__right--description_one")
+            strong oii ! 
+            | sabia que você pode garantir acesso antecipado a 
+            strong future friday 
+            | 2023?
+
+          div(class="wc-countdown" id="countdown")
+            h3(class="wc-countdown__title") faltam... 
+            div(class="wc-countdown__container" id="countdown")
+              span#days
+              span#hours
+              span#minutes
+              span#seconds
+
+            p(class="wc-countdown__description") pro início da future friday IDA!
+          
+          script.
+            document.addEventListener("DOMContentLoaded", function () {
+              // Data de término do countdown
+              const endDate = new Date("2023-11-01 00:00:00").getTime();
+
+              // Elementos para contagem separada
+              const daysElement = document.getElementById("days");
+              const hoursElement = document.getElementById("hours");
+              const minutesElement = document.getElementById("minutes");
+              const secondsElement = document.getElementById("seconds");
+
+              const timer = setInterval(function () {
+                const now = new Date().getTime();
+                const timeRemaining = endDate - now;
+
+                if (timeRemaining <= 0) {
+                  clearInterval(timer);
+                  daysElement.innerHTML = "00";
+                  hoursElement.innerHTML = "00";
+                  minutesElement.innerHTML = "00";
+                  secondsElement.innerHTML = "00";
+                } else {
+                  const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+                  const hours = Math.floor(
+                    (timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+                  );
+                  const minutes = Math.floor(
+                    (timeRemaining % (1000 * 60 * 60)) / (1000 * 60)
+                  );
+                  const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+                  daysElement.innerHTML = days.toString().padStart(2, '0');
+                  hoursElement.innerHTML = hours.toString().padStart(2, '0');
+                  minutesElement.innerHTML = minutes.toString().padStart(2, '0');
+                  secondsElement.innerHTML = seconds.toString().padStart(2, '0');
+                }
+              }, 1000);
+            })
+          
+          p(class="wc-futurefriday__right--description_two") 
+            em faça sua inscrição  
+            | pra conferir a seleção antes do início oficial, contar com condições especiais e receber promoções únicas.
+          
+          form(class="wc-futurefriday__form" action="./" method="POST")
+            div(class="wc-futurefriday__form--data")
+              div(class="wc-futurefriday__form--data_name" id="name")
+                label(for="futurefriday-name") Nome
+                input(type="text" name="futurefriday-name" id="futurefriday-name" placeholder="insira seu nome")
+              div(class="wc-futurefriday__form--data_email" id="email")
+                label(for="futurefriday-email") E-mail
+                input(type="email" name="futurefriday-email" id="futurefriday-email" placeholder="insira seu e-mail")
+              div(class="wc-futurefriday__form--data_phone" id="phone")
+                label(for="futurefriday-phone") Telefone
+                input(type="tel" name="futurefriday-phone" id="futurefriday-phone" placeholder="(00) 00000-0000" maxlength="14")
+                    
+              div(class="wc-futurefriday__form--data_newsletter" id="newsletter")
+                label(for="marketing") Quer ver mais comunicações de IDA no seu e-mail? 
+                  br
+                  | Abaixo, marque suas categorias preferIDAs:
+                div(class="wc-futurefriday__form--data_newsletter-checkbox")
+                  div(class="checkbox")
+                    input(type="checkbox" name="newsletter" value="Tops" id="tops")
+                    label(for="tops") Tops
+                  div(class="checkbox")
+                    input(type="checkbox" name="newsletter" value="Bottoms" id="bottoms")
+                    label(for="bottoms") Bottoms
+                  div(class="checkbox")
+                    input(type="checkbox" name="newsletter" value="Peças Únicas" id="pecasUnicas")
+                    label(for="pecasUnicas") Peças Únicas
+                  div(class="checkbox")
+                    input(type="checkbox" name="newsletter" value="Acessórios" id="acessorios")
+                    label(for="acessorios") Acessórios
+
+            div(class="wc-futurefriday__form--paragraph")
+              p *Ao disponibilizar os seus dados, você concorda com as Políticas de Privacidade do site.
+            div(class="wc-futurefriday__form--submit")
+              button cadastre-se!
