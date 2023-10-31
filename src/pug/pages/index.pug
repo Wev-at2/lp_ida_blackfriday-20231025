@@ -4,12 +4,9 @@ block content
     div(class="wc-futurefriday__bg")
       div(class="wc-futurefriday__left")
         picture
-          source(media="(min-width: 769px", srcset="./assets/images/ida-mainbanner4x5.jpg")
-
+          source(media="(min-width: 769px", srcset="./assets/images/ida-mainbanner1x1.jpg")
           source(media="(max-width: 768px", srcset="./assets/images/ida-mainbanner1x1.jpg")
-
-          img.ida-main__banner--img(src="/caminho-completo/para/imagem-default.jpg", alt="FUTURE FRIDAY", title="FUTURE FRIDAY", style="display: block; max-width: 100%; height: auto")
-          //- img(src="./assets/images/ida-mainbanner1x1.jpg", alt="FUTURE FRIDAY", title="FUTURE FRIDAY", srcset="")
+          img(class="ida-main__banner--img", src="/caminho-completo/para/imagem-default.jpg", alt="FUTURE FRIDAY", title="FUTURE FRIDAY", style="display: block; max-width: 100%; height: auto")
 
       div(class="wc-futurefriday__right")
         div(class="wc-futurefriday__right--container")
@@ -37,7 +34,7 @@ block content
           script.
             document.addEventListener("DOMContentLoaded", function () {
               // Data de término do countdown
-              const endDate = new Date("2023-11-01 00:00:00").getTime();
+              const endDate = new Date("2023-11-03 00:00:00").getTime();
 
               // Elementos para contagem separada
               const daysElement = document.getElementById("days");
