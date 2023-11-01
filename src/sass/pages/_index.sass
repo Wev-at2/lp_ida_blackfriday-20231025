@@ -46,8 +46,8 @@
                 color: $primary-color
                 font-family: $font-family-base
                 font-weight: $font-weight-light
-                strong
-                    font-weight: $font-weight-medium
+                // strong
+                //     font-weight: $font-weight-medium
                 em
                     font-style: italic
                 
@@ -71,7 +71,7 @@
                 h1
                     color: $secodary-color
                     font-family: $font-family-base
-                    font-weight: $font-weight-light
+                    font-weight: $font-weight-lighter
                     font-size: 2rem
                     letter-spacing: 2px
                     strong
@@ -84,7 +84,6 @@
                     font-size: 1.2rem
                     margin: 0 auto
                     position: relative
-                    // width: 60%
                     strong
                         font-weight: $font-weight-bold
 
@@ -113,11 +112,15 @@
 
                 &_one
                     margin: 0.3rem auto
+                    strong
+                        font-weight: $font-weight-bold
                     @include media('md')
                         width: 60%
                 
                 &_two
                     width: 80%
+                    strong
+                        font-style: italic
 
             .wc-countdown 
                 color: $primary-color
@@ -147,7 +150,7 @@
                         &#days, &#hours, &#minutes, &#seconds
                             font-size: 2rem
                             color: #303030
-                            font-family: "Helvetica Neue",sans-serif
+                            font-family: "Helvetica",sans-serif
                             font-weight: 300
                             display: flex
                             flex-direction: column

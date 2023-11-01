@@ -2,7 +2,7 @@
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  font-family: "Helvetica Neue", sans-serif;
+  font-family: sans-serif;
   font-weight: 500;
 }
 
@@ -153,12 +153,8 @@ section {
 
 .app .wc-futurefriday__right p {
   color: #303030;
-  font-family: "Helvetica Neue", sans-serif;
+  font-family: sans-serif;
   font-weight: 300;
-}
-
-.app .wc-futurefriday__right p strong {
-  font-weight: 500;
 }
 
 .app .wc-futurefriday__right p em {
@@ -204,8 +200,8 @@ section {
 
 .app .wc-futurefriday__right--title h1 {
   color: #CC4D31;
-  font-family: "Helvetica Neue", sans-serif;
-  font-weight: 300;
+  font-family: sans-serif;
+  font-weight: 100;
   font-size: 2rem;
   letter-spacing: 2px;
 }
@@ -216,7 +212,7 @@ section {
 
 .app .wc-futurefriday__right--title h2 {
   color: #303030;
-  font-family: "Helvetica Neue", sans-serif;
+  font-family: sans-serif;
   font-weight: 500;
   font-size: 1.2rem;
   margin: 0 auto;
@@ -255,6 +251,10 @@ section {
   margin: 0.3rem auto;
 }
 
+.app .wc-futurefriday__right--description_one strong {
+  font-weight: 700;
+}
+
 @media (min-width: 992px) {
   .app .wc-futurefriday__right--description_one {
     width: 60%;
@@ -264,9 +264,13 @@ section {
   width: 80%;
 }
 
+.app .wc-futurefriday__right--description_two strong {
+  font-style: italic;
+}
+
 .app .wc-futurefriday__right .wc-countdown {
   color: #303030;
-  font-family: "Helvetica Neue", sans-serif;
+  font-family: sans-serif;
   font-size: 1.5rem;
   text-align: center;
   width: 100%;
@@ -305,7 +309,7 @@ section {
 .app .wc-futurefriday__right .wc-countdown__container span#days, .app .wc-futurefriday__right .wc-countdown__container span#hours, .app .wc-futurefriday__right .wc-countdown__container span#minutes, .app .wc-futurefriday__right .wc-countdown__container span#seconds {
   font-size: 2rem;
   color: #303030;
-  font-family: "Helvetica Neue", sans-serif;
+  font-family: "Helvetica", sans-serif;
   font-weight: 300;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -359,7 +363,7 @@ section {
 
 .app .wc-futurefriday__form {
   color: #303030;
-  font-family: "Helvetica Neue", sans-serif;
+  font-family: sans-serif;
   width: 100%;
 }
 
